@@ -1,0 +1,19 @@
+{
+  "name": "todo-json-package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "task.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MalikTaylor/To-Do-WebApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MalikTaylor/To-Do-WebApp/issues"
+  },
+  "homepage": "https://github.com/MalikTaylor/To-Do-WebApp#readme"
+}
