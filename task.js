@@ -20,7 +20,6 @@ window.onload = function(){
             // console.log("Add Btn Clicked")
         })
     }
-
     // localStorage.clear();
 }
 
@@ -131,7 +130,6 @@ class Todo_Class{
             this.ulElement.appendChild(taskListElement)
         })
 	}
-
 }
 
 
