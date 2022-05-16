@@ -28,7 +28,7 @@
             // $row['task_id'] . '</td><td align="left">';
             // echo '</tr>';
             ?>
-                <li>
+                <li class="row todo-item d-flex align-items-center" data-id="undefined">
                     <input class="col-md-1" type="checkbox">
                     <h5 class="col-md-8 task-name"><?=$row['task_name']?></h5>
                     <div class="col-md-3 btn-group task-btns">
