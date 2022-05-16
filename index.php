@@ -1,5 +1,12 @@
 <?php
-    include_once("index.html"); 
+    require_once("./mysqli_connect.php");
+        
+    $return_mytasks = "SELECT user.user_name, user.user_id, task.task_name, task.task_id 
+    FROM usertask 
+    INNER JOIN user ON user.user_id = usertask.fk_user_id 
+    INNER JOIN task ON task.task_id = usertask.fk_task_id;";
+
+    $response = @mysqli_query($dbc, $return_mytasks);
 ?>
 
 
@@ -38,20 +45,30 @@
 
                     <div class="container" id="todo-list">
                         <ul id="todo-ul" style="list-style: none; padding: 0;"></ul>
-                        <script>
-                            $(document).ready(function(){
-                                $.ajax({
-                                    type: "GET",
-                                    url: "fetch_tasks.php",
-                                    data: "html",
-                                    success: function (message) {
-                                        console.log("success");
-                                        console.log(message);
-                                        $('#todo-ul').html(message);
-                                    }
-                                })
-                            })
-                        </script>
+                        <?php
+
+                            if($response){
+                                while($row = mysqli_fetch_array($response)){
+                                    ?>
+                                        <li class="row todo-item d-flex align-items-center" data-id="undefined">
+                                            <input class="col-md-1" type="checkbox">
+                                            <h5 class="col-md-8 task-name"><?=$row['task_name']?></h5>
+                                            <div class="col-md-3 btn-group task-btns">
+                                                <button class="btn edit-btn">Edit</button>
+                                                <button class="btn remove-btn far fa-trash-alt" data-id="undefined" aria-hidden="true"></button>
+                                            </div>
+                                        </li>
+                                    <?php
+
+                                }
+                            } else{
+                                echo "Could not issue databse query";
+                                echo mysqli_error($dbc);
+                            }
+
+                            mysqli_close($dbc);
+
+                        ?>
                     </div>
                 </div>
             
