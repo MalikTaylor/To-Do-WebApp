@@ -10,15 +10,15 @@
     $response = @mysqli_query($dbc, $return_mytasks);
 
     if($response){
-        echo '<table align="left"
-        cellspacing="5" cellpadding="8">
+        // echo '<table align="left"
+        // cellspacing="5" cellpadding="8">
 
-        <tr>
-            <td align="left"<b>User Name</b></td>
-            <td align="left"<b>User ID</b></td>
-            <td align="left"<b>Task</b></td>
-            <td align="left"<b>Task ID</b></td>
-        </tr>';
+        // <tr>
+        //     <td align="left"<b>User Name</b></td>
+        //     <td align="left"<b>User ID</b></td>
+        //     <td align="left"<b>Task</b></td>
+        //     <td align="left"<b>Task ID</b></td>
+        // </tr>';
 
         while($row = mysqli_fetch_array($response)){
             // echo '<tr><td align="left">' .
