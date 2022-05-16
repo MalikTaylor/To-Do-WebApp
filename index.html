@@ -33,21 +33,24 @@
 
                     <div class="container" id="todo-list">
                         <ul id="todo-ul" style="list-style: none; padding: 0;"></ul>
-                        <script>
-                            $(document).ready(function(){
-                                $.ajax({
-                                    type: "GET",
-                                    url: "fetch_tasks.php",
-                                    data: "data",
-                                    success: function (message) {
-                                        console.log("success");
-                                        console.log(message);
-                                        $('#todo-ul').html(message);
-                                    }
-                                })
-                            })
-                        </script>
+                        
                     </div>
+                </div>
+                <div id="dynamic-content">
+                    <script>
+                        $(document).ready(function(){
+                            $.ajax({
+                                type: "GET",
+                                url: "fetch_tasks.php",
+                                data: "data",
+                                success: function (message) {
+                                    console.log("success");
+                                    console.log(message);
+                                    $('#dynamic-content').html(message);
+                                }
+                            })
+                        })
+                    </script>
                 </div>
             </div>
         </div>
