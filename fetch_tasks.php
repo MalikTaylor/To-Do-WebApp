@@ -1,5 +1,6 @@
 <?php
     require_once("./mysqli_connect.php");
+    include_once("index.html"); 
     
     $return_mytasks = "SELECT user.user_name, user.user_id, task.task_name, task.task_id 
     FROM usertask 
