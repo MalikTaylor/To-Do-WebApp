@@ -42,11 +42,11 @@
                             $.ajax({
                                 type: "GET",
                                 url: "fetch_tasks.php",
-                                data: "data",
+                                data: "html",
                                 success: function (message) {
                                     console.log("success");
                                     console.log(message);
-                                    // $('#dynamic-content').html(message);
+                                    $('#dynamic-content').html(message);
                                 }
                             })
                         })
