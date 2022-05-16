@@ -21,14 +21,25 @@
         </tr>';
 
         while($row = mysqli_fetch_array($response)){
-            echo '<tr><td align="left">' .
-            $row['user_name'] . '</td><td align="left">' . 
-            $row['user_id'] . '</td><td align="left">' .
-            $row['task_name'] . '</td><td align="left">' .
-            $row['task_id'] . '</td><td align="left">';
-            echo '</tr>';
+            // echo '<tr><td align="left">' .
+            // $row['user_name'] . '</td><td align="left">' . 
+            // $row['user_id'] . '</td><td align="left">' .
+            // $row['task_name'] . '</td><td align="left">' .
+            // $row['task_id'] . '</td><td align="left">';
+            // echo '</tr>';
+            ?>
+                <li>
+                    <input class="col-md-1" type="checkbox">
+                    <h5 class="col-md-8 task-name"><?=$row['task_name']?></h5>
+                    <div class="col-md-3 btn-group task-btns">
+                        <button class="btn edit-btn">Edit</button>
+                        <button class="btn remove-btn far fa-trash-alt" data-id="undefined" aria-hidden="true"></button>
+                    </div>
+                </li>
+            <?php
+
         }
-        echo "</table>";
+        // echo "</table>";
 
     } else{
         echo "Could not issue databse query";
