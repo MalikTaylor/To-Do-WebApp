@@ -144,6 +144,7 @@ class Todo_Class{
                     taskListElement.classList.add("row-xs-12", "todo-item", "d-flex", "align-items-center");
 
                     //Check Box
+<<<<<<< HEAD
                     const rndCheckContainer = document.createElement("div");
                     rndCheckContainer.classList.add("round", "col-2", "col-sm-1");
                     const checkbox = document.createElement("input");
@@ -156,6 +157,13 @@ class Todo_Class{
                     rndCheckContainer.appendChild(checkbox);
                     rndCheckContainer.appendChild(newlabel);
                     taskListElement.appendChild(rndCheckContainer);
+=======
+                    const checkbox = document.createElement("input");
+                    checkbox.classList.add("col-2", "col-sm-1", "text-start", "checkbox"); //"col-md-1", "col-sm-1"
+                    checkbox.setAttribute("type", "checkbox");
+                    checkbox.setAttribute("data-id", listObject.task_id);
+                    taskListElement.appendChild(checkbox);
+>>>>>>> 8fa703e233b060528e2f02deb73ed8b034628330
 
                     //Task Name
                     const name = document.createElement("h5")
@@ -195,8 +203,13 @@ class Todo_Class{
                     
 
                     checkbox.addEventListener("click", function(element){
+<<<<<<< HEAD
                         const selectId = element.target.parentNode.parentNode.getAttribute("data-id");
                         var listItem = this.parentElement.parentElement; //Find the task element
+=======
+                        const selectId = element.target.parentNode.getAttribute("data-id");
+                        var listItem = this.parentElement; //Find the task element
+>>>>>>> 8fa703e233b060528e2f02deb73ed8b034628330
                         myTodoList.done_undone(selectId, listItem); //Send task element to be moved to completed tbl 
                     })
      

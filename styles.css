@@ -53,17 +53,29 @@ nav{
     padding-right: 15px;
     padding-bottom: 15px;
     width: 20%;
+<<<<<<< HEAD
     min-height: 100vh;
+=======
+    height: 100%;
+>>>>>>> 8fa703e233b060528e2f02deb73ed8b034628330
 }
 
 .navbar-collapse.collapsing {
     left: -20%;
+<<<<<<< HEAD
     transition: left .25s linear;
+=======
+    transition: left 100ms ease;
+>>>>>>> 8fa703e233b060528e2f02deb73ed8b034628330
 }
 
 .navbar-collapse.show {
     left: 0;
+<<<<<<< HEAD
     transition: all .25s linear;
+=======
+    transition: left 300ms ease;
+>>>>>>> 8fa703e233b060528e2f02deb73ed8b034628330
 }
 
 .nav-link{
@@ -225,17 +237,24 @@ nav{
 }
 
 .todo-item{
+<<<<<<< HEAD
     height: 40px;
+=======
+    height: 50px;
+>>>>>>> 8fa703e233b060528e2f02deb73ed8b034628330
     background-color: #be2f3d;
     /* border: 1px solid #CCC; */
     border-radius: 6px;
     margin-top: 5px;
     color: white;
+<<<<<<< HEAD
 }
 
 
 .round {
     position: relative;
+=======
+>>>>>>> 8fa703e233b060528e2f02deb73ed8b034628330
 }
   
 .round label {
@@ -319,6 +338,7 @@ nav{
 }
 
 @media screen and (max-width: 414px){
+<<<<<<< HEAD
     
 
     .navbar-collapse {
@@ -332,6 +352,8 @@ nav{
     ::-webkit-scrollbar-thumb {
         background-color: rgb(233, 230, 230);
     }
+=======
+>>>>>>> 8fa703e233b060528e2f02deb73ed8b034628330
 
     #task-container{
         background-color: white;
