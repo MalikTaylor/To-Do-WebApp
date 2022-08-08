@@ -86,11 +86,7 @@
             </a>
         </nav>
 
-<<<<<<< HEAD
         <main>           
-=======
-        <main>
->>>>>>> 8fa703e233b060528e2f02deb73ed8b034628330
             <div class="row d-flex justify-content-center">
                 <div id="header" class="row d-flex align-items-center">
                     <h3 style="padding-left: 20px;">All Tasks</h3>
